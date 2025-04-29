@@ -15,7 +15,6 @@ namespace TorresJ_EvaluacionP1.Models
         //  diferentes (Data Annotations) para controlar los datos ingresados por el usuario en la nueva tabla.
 
         [Key]
-        [MaxLength(10)]
         public int IdCliente { get; set; }
         [MaxLength(100)]
         [Required]
