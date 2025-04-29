@@ -3,6 +3,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TorresJ_EvaluacionP1.Models
 {
@@ -34,8 +35,9 @@ namespace TorresJ_EvaluacionP1.Models
         [DataType(DataType.Date)]
         public DateTime FechaRegistro { get; set; }
 
-        
-        public Recompensas PlanRecompensas { get; set; }
+        public int IdRecompensaCliente { get; set;}
+        [ForeignKey ("IdRecompensaCliente")]
+        public Recompensas? Recompensas { get; set; }
 
     }
 }

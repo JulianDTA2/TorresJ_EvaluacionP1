@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using TorresJ_EvaluacionP1.Models;
 
 namespace TorresJ_EvaluacionP1.Models
 {
@@ -11,13 +12,13 @@ namespace TorresJ_EvaluacionP1.Models
 
         public int IdRecompensas { get; set;}
         public string Nombre { get; set;}
-        public DateTime? FechaInicio { get; set;}
-        public decimal PuntosAc 
+        public DateTime FechaInicio { get; set;}
+        public int PuntosAcumulados { get; set; }
+        public string TipoRecompensa
         {
             get
             {
-
-                return 0;
+                return PuntosAcumulados < 500 ? "SILVER" : "GOLD";
             }
         }
     }
