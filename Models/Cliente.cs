@@ -21,6 +21,13 @@ namespace TorresJ_EvaluacionP1.Models
         [Required]
         [DisplayName("Ingrese el nombre: ")]
         public string NombreCliente { get; set; }
+        public string NombreCreador 
+        {
+            get
+            {
+                return "TorresJulian";
+            }
+        }
         [DisplayName("Edad")]
         [Range(18, 100)]
         public int Edad { get; set; }
@@ -34,10 +41,10 @@ namespace TorresJ_EvaluacionP1.Models
         [DisplayName("Fecha Actual")]
         [DataType(DataType.Date)]
         public DateTime FechaRegistro { get; set; }
-
         public int IdRecompensaCliente { get; set;}
         [ForeignKey ("IdRecompensaCliente")]
         public Recompensas? Recompensas { get; set; }
+
 
     }
 }

@@ -3,7 +3,17 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Meme</h1>
-    <img />
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <img src="~/images/meme.jpg" alt="Meme" style="width:400px; height:500px;" />
+    <br /><br />
+    <input type="text" id="campoTexto" class="form-control mb-3" placeholder="Escribe algo..." />
+    <button class="btn btn-outline-info btn-lg" onclick="mostrarMensaje()">Mostrar mensaje</button>
 </div>
+
+@section Scripts {
+<script>
+    function mostrarMensaje() {
+        let valor = document.getElementById('campoTexto').value;
+        alert(`Mi nombre es Julian Torres, mi hobbie es Programar y el valor del campo de texto es: ${valor}`);
+    }
+</script>
+}
